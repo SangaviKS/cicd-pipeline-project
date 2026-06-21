@@ -38,7 +38,7 @@ cicd-pipeline-project/
 │   └── test_sensor.py         # 14 pytest unit tests
 ├── .github/workflows/
 │   └── ci.yml                 # GitHub Actions pipeline
-├── azure-pipelines.yml        # Azure DevOps pipeline (work in progress)
+├── azure-pipelines.yml        # Azure DevOps pipeline
 └── requirements.txt
 ```
 
