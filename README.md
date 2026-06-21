@@ -2,6 +2,8 @@
 # CI/CD Pipeline Project
 [![CI Pipeline](https://github.com/SangaviKS/cicd-pipeline-project/actions/workflows/ci.yml/badge.svg)](https://github.com/SangaviKS/cicd-pipeline-project/actions/workflows/ci.yml)
 
+[![Build Status](https://dev.azure.com/sangavi-devops/cicd-pipeline-project/_apis/build/status%2FSangaviKS.cicd-pipeline-project?branchName=main)](https://dev.azure.com/sangavi-devops/cicd-pipeline-project/_build/latest?definitionId=1&branchName=main)
+
 Automated CI/CD pipeline demonstrating Python testing, coverage reporting,
 and multi-platform pipeline configuration using both GitHub Actions and
 Azure DevOps.
