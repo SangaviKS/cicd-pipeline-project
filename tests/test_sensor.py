@@ -66,3 +66,14 @@ def test_validate_reading_rejects_wrong_type():
     }
     is_valid, message = validate_reading(reading)
     assert is_valid == False
+
+def test_validate_reading_rejects_invalid_pressure_type():
+    reading = {
+        "deviceId": "sensor-01",
+        "temperature": 75.0,
+        "pressure": "high",
+        "vibration": 2.0,
+        "timestamp": "2026-06-15T10:00:00Z"
+    }
+    is_valid, message = validate_reading(reading)
+    assert is_valid == False
