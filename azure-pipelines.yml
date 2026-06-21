@@ -5,7 +5,7 @@ trigger:
       - dev
 
 pool:
-  vmImage: 'mac-local-pool'
+  name: 'mac-local-pool'
 
 strategy:
   matrix:
