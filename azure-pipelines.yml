@@ -11,21 +11,21 @@ strategy:
   matrix:
     Python311:
       python.version: '3.11'
+      python.executable: '/opt/homebrew/bin/python3.11'
     Python312:
       python.version: '3.12'
+      python.executable: '/opt/homebrew/bin/python3.12'
 
 steps:
-- task: UsePythonVersion@0
-  inputs:
-    versionSpec: '$(python.version)'
-  displayName: 'Use Python $(python.version)'
-
 - script: |
+    $(python.executable) -m venv venv_$(python.version)
+    source venv_$(python.version)/bin/activate
     python -m pip install --upgrade pip
     pip install -r requirements.txt
-  displayName: 'Install dependencies'
+  displayName: 'Set up venv and install dependencies'
 
 - script: |
+    source venv_$(python.version)/bin/activate
     pytest tests/ --cov=core --cov-report=xml --cov-report=html --junitxml=test-results.xml -v
   displayName: 'Run tests with coverage'
 
