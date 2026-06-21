@@ -5,7 +5,7 @@ trigger:
       - dev
 
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: 'mac-local-pool'
 
 strategy:
   matrix:
